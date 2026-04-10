@@ -8,6 +8,7 @@
 4../cfg/models/rt-detr/目录下增加新建的模型.yaml
 
 训练代码
+```
 from ultralytics import RTDETR
 if __name__ == '__main__':
     # model = RTDETR("模型名称.yaml")
@@ -28,3 +29,4 @@ if __name__ == '__main__':
         device="0,1",
         cache="ram"
     )
+```
