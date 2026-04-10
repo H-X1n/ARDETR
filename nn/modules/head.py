@@ -1778,6 +1778,9 @@ class v10Detect(Detect):
         self.cv2 = self.cv3 = None
 
 
+"""
+注意力残差》》》
+"""
 class AttnRes(nn.Module):
     def __init__(self, dim=256):
         super().__init__()
@@ -1800,6 +1803,7 @@ class AttnRes(nn.Module):
 
 """
 block attnres   
+分块attnres
 """
 class BlockAttnResDeformableTransformerDecoderLayer(nn.Module):
     def __init__(
@@ -1914,7 +1918,7 @@ class BlockAttnResDeformableTransformerDecoder(nn.Module):
         return torch.stack(dec_bboxes), torch.stack(dec_cls)
 
 # ======================================
-# 4. 完整AttnResRTDETRDecoder
+BlockAttnResRTDETRDecoder,step为分块步幅，例如当step为2时，将两个decoder作为一个block
 # ======================================
 class BlockAttnResRTDETRDecoder(nn.Module):
     export = False  # export mode
