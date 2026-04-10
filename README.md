@@ -2,10 +2,11 @@
 ./cfg/models/rt-detr/目录下为新建的模型列表.yaml
 
 在本地ultralytics目录下需做以下更改
-1.修改./nn/modules/head.py增加新模块
-2../nn/modules/__init__.py里注册新增加的模块
-3../nn/task.py里import已注册的模块
-4../cfg/models/rt-detr/目录下增加新建的模型.yaml
+
+- 1.修改./nn/modules/head.py增加新模块
+- 2../nn/modules/__init__.py里注册新增加的模块
+- 3../nn/task.py里import已注册的模块
+- 4../cfg/models/rt-detr/目录下增加新建的模型.yaml
 
 训练代码
 ```
