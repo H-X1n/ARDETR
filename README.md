@@ -44,6 +44,9 @@ Decoder层数对RTDETR和ARDETR的mAP50的影响
 | RTDETR | 45.9  | 47.1  | **47.6**  | 47.5  | 38.5  | 39.1  | 39.2  | 38.8  |
 | ARDETR | 44.9  | **47.9**  | 46.9  | 46.3  | 41.8  | 41.4  | 39.4  | 41.4  |
 
+<img width="601" height="344" alt="image" src="https://github.com/user-attachments/assets/d251f3bb-c83d-4931-966c-dcb1184d6793" />
+
+
 最后选用**ARDETR-DET3**
 | Model        | P/%   | R/%   | mAP50/% | GFLOPS | Params/M |
 |:-------------|------:|------:|--------:|-------:|---------:|
