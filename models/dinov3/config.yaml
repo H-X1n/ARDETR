@@ -1,0 +1,97 @@
+seed: 42
+
+data:
+  root: VisDrone/VisDrone_Dataset
+  train_images: VisDrone2019-DET-train/images
+  train_labels: VisDrone2019-DET-train/labels
+  val_images: VisDrone2019-DET-val/images
+  val_labels: VisDrone2019-DET-val/labels
+  num_classes: 10
+  class_names:
+    - pedestrian
+    - people
+    - bicycle
+    - car
+    - van
+    - truck
+    - tricycle
+    - awning-tricycle
+    - bus
+    - motor
+
+model:
+  backbone: dinov3_vits16
+  backbone_pretrained: true
+  backbone_weights: LVD1689M
+  detector_checkpoint: null
+  n_windows_sqrt: 0
+  layers_to_use: [8, 9, 10, 11]
+  blocks_to_train: []
+  backbone_use_layernorm: false
+
+  with_box_refine: true
+  two_stage: true
+  mixed_selection: true
+  look_forward_twice: true
+  k_one2many: 6
+  lambda_one2many: 1.0
+  num_queries_one2one: 300
+  num_queries_one2many: 900
+  reparam: true
+  position_embedding: SINE
+  num_feature_levels: 1
+  dec_layers: 6
+  dim_feedforward: 2048
+  dropout: 0.0
+  norm_type: pre_norm
+  proposal_feature_levels: 4
+  proposal_min_size: 50
+  decoder_type: global_rpe_decomp
+  decoder_use_checkpoint: false
+  decoder_rpe_hidden_dim: 512
+  decoder_rpe_type: linear
+  add_transformer_encoder: true
+  num_encoder_layers: 6
+  aux_loss: true
+  topk: 300
+  hidden_dim: 256
+  nheads: 8
+
+train:
+  epochs: 300
+  imgsz: 640
+  batch_size: 6
+  num_workers: 4
+  amp: false
+  optimizer: AdamW
+  lr: 0.0001
+  weight_decay: 0.01
+  warmup_epochs: 2
+  grad_clip_norm: 0.1
+  log_interval: 20
+  device: cuda:0
+
+loss:
+  cost_class: 2.0
+  cost_bbox: 5.0
+  cost_giou: 2.0
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  weight_class: 2.0
+  weight_bbox: 5.0
+  weight_giou: 2.0
+
+eval:
+  conf_thres: 0.001
+  iou_thres: 0.5
+  max_dets: 300
+  batch_size: 4
+  num_workers: 4
+  device: cuda:0
+
+profile:
+  input_size: [3, 640, 640]
+
+output:
+  dir: output/visdrone_dinov3
+  save_best_metric: mAP50
