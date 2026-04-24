@@ -49,7 +49,7 @@ Decoder层数对RTDETR和ARDETR的mAP50的影响
 最后选用**ARDETR-DET3**
 | Model        | P/%   | R/%   | mAP50/% | GFLOPS | Params/M |
 |:-------------|------:|------:|--------:|-------:|---------:|
-| DINOv3 ViT-L       |    $\XSolidBrush$   |       |         |        | 303.08    |
+| DINOv3 ViT-L       |      |       |         |        | 303.08 (too large)    |
 | DINOv3 ViT-B       |       |       |         |        | 85.64    |
 | DINOv3 ViT-S+       |       |       |         |        | 28.68    |
 | YOLOv12-L    | 53.9  | 42.2  | 43.3    | 88.6   | 26.3     |
