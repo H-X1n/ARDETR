@@ -1,0 +1,12 @@
+CLASS_NAMES = [
+    'pedestrian',
+    'people',
+    'bicycle',
+    'car',
+    'van',
+    'truck',
+    'tricycle',
+    'awning-tricycle',
+    'bus',
+    'motor',
+]
