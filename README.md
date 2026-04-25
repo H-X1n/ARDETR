@@ -37,7 +37,7 @@ result：
 | BARRTDETR62 | 32          | 103.5       | 57.3        | 40.6        | 41.4        | 24.9        | 23.9       |
 | BARRTDETR63 | 32          | 103.5       | 55.6        | 40.7        | 41.3        | 25          | 24.2       |
 | BARRTDETR66 | 32          | 103.5       | 554         | 40.1        | 40.8        | 24.6        | 25.1       |
-| DINOv3 | 36 | 108.5 | 57.6 | 44.2 | 44.7 | 26.8 | 31.3 |
+| DINOv3 | 36 | 108.5 | 57.6 | 44.2 | 44.7 | 26.8 | 28.3 |
 
 The influence of decoder layer quantity on the mAP50 performance of RTDETR and ARRTDETR models
 | Model  | Det2  | Det3  | Det4  | Det5  | Det6  | Det8  | Det10 | Det12 |
