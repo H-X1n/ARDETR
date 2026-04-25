@@ -62,7 +62,7 @@ sample code for training
 ```
 from ultralytics import RTDETR
 if __name__ == '__main__':
-    # model = RTDETR("模型名称.yaml")
+    # model = RTDETR("model_name.yaml")
     model.info()
     results = model.train(
         data="data.yaml",  
