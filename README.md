@@ -51,7 +51,7 @@ Decoder层数对RTDETR和ARDETR的mAP50的影响
 |:-------------|------:|------:|--------:|-------:|---------:|
 | DINOv3 ViT-L       |      |       |         |        | 303.08 (too large)    |
 | DINOv3 ViT-B       |       |       |         |        | 85.64 (backbone)    |
-| DINOv3 ViT-S+       |       |       |         |        | 28.68 (backbone); 36.07 (total detector)    |
+| DINOv3 ViT-S+       |  0.57605     |  0.44237     |   0.44668      |   108.563     | 28.68 (backbone); 36.07 (total detector)    |
 | YOLOv12-L    | 53.9  | 42.2  | 43.3    | 88.6   | 26.3     |
 | YOLOv12-M    | 53.7  | 40.5  | 41.6    | 67.2   | 20.1     |
 | YOLOv26-L    | 54.2  | 43.1  | 44.4    | 86.1   | 24.7     |
